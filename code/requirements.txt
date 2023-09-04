@@ -1,4 +1,4 @@
 plotly
 geopandas
-xml
+ElementTree
 pandas
