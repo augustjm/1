@@ -18,8 +18,8 @@ def read_kml_revised(kml_path):
 
 @st.cache_data
 def load_data():
-    geo_df = gpd.read_file(r"DengueClustersGEOJSON.geojson")
-    kml_df = read_kml_revised(r"DengueClustersKML.kml")
+    geo_df = gpd.read_file("DengueClustersGEOJSON.geojson")
+    kml_df = read_kml_revised("DengueClustersKML.kml")
     merged_df = pd.merge(geo_df, kml_df, on='Name', how='outer')
     return merged_df
 
